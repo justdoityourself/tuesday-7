@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EchoPractice4Test.Framework
+namespace Tuesday7.Framework
 {
     abstract class TestInstruction
     {

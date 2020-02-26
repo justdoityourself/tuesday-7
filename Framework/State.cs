@@ -5,7 +5,7 @@ using System.Text;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace EchoPractice4Test.Framework
+namespace Tuesday7.Framework
 {
     class State
     {

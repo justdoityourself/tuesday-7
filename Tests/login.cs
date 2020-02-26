@@ -1,4 +1,4 @@
-﻿using EchoPractice4Test.Framework;
+﻿using Tuesday7.Framework;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Text;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace EchoPractice4Test.Tests
+namespace Tuesday7.Tests
 {
     class Login : TestInstruction
     {
