@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EchoPractice4Test": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Came from command line\"."
+    }
+  }
+}
