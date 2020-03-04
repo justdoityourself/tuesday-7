@@ -1,9 +1,7 @@
 
 *.ide
 *.lock
-.vs/EchoPractice4Test/DesignTimeBuild/.dtbcache
-obj/Debug/netcoreapp3.1/EchoPractice4Test.csproj.CopyComplete
-obj/Debug/netcoreapp3.1/EchoPractice4Test.csproj.FileListAbsolute.txt
+.vs/*
 *.ide-shm
 *.ide-wal
 bin/*
