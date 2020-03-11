@@ -16,18 +16,16 @@ namespace Tuesday7
             IWebDriver mDriver;
 
             mDriver = new ChromeDriver(@"c:\selenium\chrome80");
-            mDriver.Url = "https://google.com";
+            mDriver.Url = "https://habitsmasher.d8data.io";
             mDriver.Manage().Window.Maximize();
 
-            var search_input = mDriver.FindElement(By.XPath("/html/body[@id='gsr']/div[@id='viewport']/div[@id='searchform']/form[@id='tsf']/div[2]/div[@class='A8SBwf sbfc']/div[@class='RNNXgb']/div[@class='SDkEP']/div[@class='a4bIc']/input[@class='gLFyf gsfi']"));
-            //var do_search_button = mDriver.FindElement(By.XPath("/html/body[@id='gsr']/div[@id='viewport']/div[@id='searchform']/form[@id='tsf']/div[2]/div[@class='A8SBwf']/div[@class='FPdoLc tfB0Bf']/center/input[@class='gNO89b']"));
+            var main_screen_path = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt']";
 
-            search_input.SendKeys("Google This");
-            search_input.SendKeys(Keys.Return);
+            var main_screen = mDriver.FindElement(By.XPath(main_screen_path));
 
-            Thread.Sleep(3);
+            main_screen.Click();
 
-            //do_search_button.Click();
+
 
             Thread.Sleep(30000); //Wait for 30 seconds.
 
