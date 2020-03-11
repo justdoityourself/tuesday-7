@@ -30,8 +30,14 @@ namespace Tuesday7
             var char_sel = mDriver.FindElement(By.XPath(char_sel_path));
 
             char_sel.Click();
-            
-           
+
+            var Pre_det_path = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt'][2]/div/div[@class='v-data-table elevation-1 theme--light']/div[@class='v-data-table__wrapper']/table/tbody/tr[1]/td[@class='text-start'][7]/button[@class='v-icon notranslate v-data-table__expand-icon v-icon--link mdi mdi-chevron-down theme--light']";
+
+            var Pre_det = mDriver.FindElement(By.XPath(Pre_det_path));
+
+            Pre_det.Click();
+
+
 
 
 
