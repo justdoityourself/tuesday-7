@@ -37,7 +37,11 @@ namespace Tuesday7
 
             Pre_det.Click();
 
+            var set_sel_path = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt'][3]/button[@class='v-icon notranslate v-icon--link material-icons theme--light']";
 
+            var set_sel = mDriver.FindElement(By.XPath(set_sel_path));
+
+            set_sel.Click();
 
 
 
