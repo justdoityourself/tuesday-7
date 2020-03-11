@@ -25,6 +25,14 @@ namespace Tuesday7
 
             main_screen.Click();
 
+            var char_sel_path = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt'][2]/div/div[@class='v-data-table elevation-1 theme--light']/div[@class='v-data-table__wrapper']/table/tbody/tr[4]/td[@class='text-start'][1]/div[@class='v-data-table__checkbox v-simple-checkbox']/i[@class='v-icon notranslate mdi mdi-checkbox-blank-outline theme--light']";
+
+            var char_sel = mDriver.FindElement(By.XPath(char_sel_path));
+
+            char_sel.Click();
+            
+           
+
 
 
             Thread.Sleep(30000); //Wait for 30 seconds.
