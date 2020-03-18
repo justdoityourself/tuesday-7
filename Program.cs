@@ -11,6 +11,14 @@ namespace Tuesday7
 {
     class Program
     {
+        static void Andrew(IWebDriver mDriver)
+        {
+            var main_screen_path = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt']";
+
+            var main_screen = mDriver.FindElement(By.XPath(main_screen_path));
+
+            main_screen.Click();
+        }
         static void Main(string[] args)
         {
             IWebDriver mDriver;
@@ -19,11 +27,7 @@ namespace Tuesday7
             mDriver.Url = "https://habitsmasher.d8data.io";
             mDriver.Manage().Window.Maximize();
 
-            var main_screen_path = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt']";
-
-            var main_screen = mDriver.FindElement(By.XPath(main_screen_path));
-
-            main_screen.Click();
+            Andrew(mDriver);
 
             var char_sel_path = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt'][2]/div/div[@class='v-data-table elevation-1 theme--light']/div[@class='v-data-table__wrapper']/table/tbody/tr[4]/td[@class='text-start'][1]/div[@class='v-data-table__checkbox v-simple-checkbox']/i[@class='v-icon notranslate mdi mdi-checkbox-blank-outline theme--light']";
 
