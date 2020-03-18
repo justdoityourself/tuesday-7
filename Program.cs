@@ -29,6 +29,15 @@ namespace Tuesday7
             set_sel.Click();
         }
 
+        static void Jake(IWebDriver mDriver)
+        {
+
+            var char_sel_path = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt'][2]/div/div[@class='v-data-table elevation-1 theme--light']/div[@class='v-data-table__wrapper']/table/tbody/tr[4]/td[@class='text-start'][1]/div[@class='v-data-table__checkbox v-simple-checkbox']/i[@class='v-icon notranslate mdi mdi-checkbox-blank-outline theme--light']";
+
+            var char_sel = mDriver.FindElement(By.XPath(char_sel_path));
+
+            char_sel.Click();
+        }
         static void Main(string[] args)
         {
             IWebDriver mDriver;
@@ -39,11 +48,7 @@ namespace Tuesday7
 
             Andrew(mDriver);
 
-            var char_sel_path = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt'][2]/div/div[@class='v-data-table elevation-1 theme--light']/div[@class='v-data-table__wrapper']/table/tbody/tr[4]/td[@class='text-start'][1]/div[@class='v-data-table__checkbox v-simple-checkbox']/i[@class='v-icon notranslate mdi mdi-checkbox-blank-outline theme--light']";
-
-            var char_sel = mDriver.FindElement(By.XPath(char_sel_path));
-
-            char_sel.Click();
+            Jake(mDriver);
 
             var Pre_det_path = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt']/div[@class='gvt'][2]/div/div[@class='v-data-table elevation-1 theme--light']/div[@class='v-data-table__wrapper']/table/tbody/tr[1]/td[@class='text-start'][7]/button[@class='v-icon notranslate v-data-table__expand-icon v-icon--link mdi mdi-chevron-down theme--light']";
 
