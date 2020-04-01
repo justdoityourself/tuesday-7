@@ -38,7 +38,8 @@ namespace Tuesday7
 
             char_sel.Click();
         }
-        static void Main(string[] args)
+
+        static void HabitSmasherTest()
         {
             IWebDriver mDriver;
 
@@ -63,6 +64,20 @@ namespace Tuesday7
             Thread.Sleep(30000); //Wait for 30 seconds.
 
             mDriver.Close();
+        }
+
+        static void Main(string[] args)
+        {
+            IWebDriver mDriver;
+
+            mDriver = new ChromeDriver(@"c:\selenium\chrome80");
+            mDriver.Url = "https://class.d8data.io";
+            mDriver.Manage().Window.Maximize();
+
+            var andrew = mDriver.FindElement(By.XPath("/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[5]"));
+
+            if (andrew.Text == "Andrew")
+                Console.WriteLine("Andrew Is There");
         }
     }
 }
