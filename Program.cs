@@ -76,8 +76,23 @@ namespace Tuesday7
 
             var andrew = mDriver.FindElement(By.XPath("/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[5]"));
 
+
             if (andrew.Text == "Andrew")
                 Console.WriteLine("Andrew Is There");
-        }
+
+            var Ed = mDriver.FindElement(By.XPath("/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[3]"));
+
+            if (Ed.Text == "Ed")
+                Console.WriteLine("Ed Rock's");
+            var caleb = mDriver.FindElement(By.XPath("/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[2]"));
+
+            if (caleb.Text == "caleb")
+                Console.WriteLine("caleb is here");
+
+            var Jacob = mDriver.FindElement(By.XPath("/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[4]"));
+
+            if (Jacob.Text == "Jacob")
+                Console.WriteLine("Jacob is PEBKAK KING");
+        } 
     }
 }
