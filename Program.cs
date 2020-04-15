@@ -88,6 +88,27 @@ namespace Tuesday7
                 Console.WriteLine("Andrew Failed");
         }
 
+        static void LukeDataBindingTest(IWebDriver mDriver)
+        {
+            var label_xpath = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[1]/div[1]";
+            var input_id = "input-15";
+
+            Thread.Sleep(2000);
+
+            var label_handle = mDriver.FindElement(By.XPath(label_xpath));
+            var input_handle = mDriver.FindElement(By.Id(input_id));
+
+            Thread.Sleep(1000);
+
+            //input_handle.Clear();
+            input_handle.SendKeys("Luke's Test");
+
+            if (label_handle.Text == "LukeLuke's Test")
+                Console.WriteLine("Luke Success");
+            else
+                Console.WriteLine("Luke Failed");
+        }
+
         static void Week2()
         {
             /*var andrew = mDriver.FindElement(By.XPath("/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[5]"));
@@ -120,6 +141,7 @@ namespace Tuesday7
             mDriver.Manage().Window.Maximize();
 
             AndrewDataBindingTest(mDriver);
+            LukeDataBindingTest(mDriver);
         } 
     }
 }
