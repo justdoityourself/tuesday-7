@@ -6,6 +6,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 using System.Threading;
+using OpenQA.Selenium.Support.UI;
 
 namespace Tuesday7
 {
@@ -66,15 +67,30 @@ namespace Tuesday7
             mDriver.Close();
         }
 
-        static void Main(string[] args)
+        static void AndrewDataBindingTest(IWebDriver mDriver)
         {
-            IWebDriver mDriver;
+            var label_xpath = "/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[5]/div[1]";
+            var input_id = "input-31";
 
-            mDriver = new ChromeDriver(@"c:\selenium\chrome80");
-            mDriver.Url = "https://class.d8data.io";
-            mDriver.Manage().Window.Maximize();
+            Thread.Sleep(2000);
 
-            var andrew = mDriver.FindElement(By.XPath("/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[5]"));
+            var label_handle = mDriver.FindElement(By.XPath(label_xpath));
+            var input_handle = mDriver.FindElement(By.Id(input_id));
+
+            Thread.Sleep(1000);
+
+            //input_handle.Clear();
+            input_handle.SendKeys("Andrew's Test");
+
+            if(label_handle.Text == "AndrewAndrew's Test")
+                Console.WriteLine("Andrew Success");
+            else 
+                Console.WriteLine("Andrew Failed");
+        }
+
+        static void Week2()
+        {
+            /*var andrew = mDriver.FindElement(By.XPath("/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[5]"));
 
 
             if (andrew.Text == "Andrew")
@@ -92,7 +108,18 @@ namespace Tuesday7
             var Jacob = mDriver.FindElement(By.XPath("/html/body/div[@id='app']/div[@class='v-application--wrap']/main[@class='v-content']/div[@class='v-content__wrap']/div[4]"));
 
             if (Jacob.Text == "Jacob")
-                Console.WriteLine("Jacob is PEBKAK KING");
+                Console.WriteLine("Jacob is PEBKAK KING");*/
+        }
+
+        static void Main(string[] args)
+        {
+            IWebDriver mDriver;
+
+            mDriver = new ChromeDriver(@"c:\selenium\chrome80");
+            mDriver.Url = "https://class.d8data.io";
+            mDriver.Manage().Window.Maximize();
+
+            AndrewDataBindingTest(mDriver);
         } 
     }
 }
